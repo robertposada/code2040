@@ -21,10 +21,8 @@ def main():
     prefixDictionary = json.loads(req4.content) 
     noPrefixArray = excludePrefixedWords(prefixDictionary['prefix'],prefixDictionary['array'])
     jsonData4['array'] = noPrefixArray
-    print(jsonData4['array'])
     jsonData4 = json.dumps(jsonData4)
-    req4 = requests.post(url2,jsonData4,headers = headers)
-    print(req4.content)
+    requests.post(url2,jsonData4,headers = headers)
     
 main()
     

@@ -19,8 +19,8 @@ def main():
     data = json.loads((req3.content))
     positionOfNeedle = needleInAHaystack(data['needle'],data['haystack'])
     jsonData3['needle'] = positionOfNeedle
-    req3 = requests.post(url2,jsonData3)
-
+    requests.post(url2,jsonData3)
+    
 main()
     
     
